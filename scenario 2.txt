@@ -1,0 +1,37 @@
+Automation Softwarw Build
+Advantages:
+Improve product quality
+Accelerate the compile and link processing
+Eliminate redundant tasks
+Minimize "bad builds"
+Eliminate dependencies on key personnel
+Have history of builds and releases in order to investigate issues
+Save time and money 
+
+
+How to Auto Build and Deployment of java web appication:
+In Tomcat:
+ Create a resource group
+az group create --location westus --name myapp-rg
+
+# Create an app service plan of type Linux
+az appservice plan create -g myapp-rg -n myapp-service-plan --is-linux
+
+# Create an App Service from the plan with Tomcat and JRE 8 as the runtime
+az webapp create -g myapp-rg -p myapp-service-plan -n my-app-name --runtime "TOMCAT|8.5-jre8"
+
+
+Testing types in Automation:
+Layering test 
+input-output test
+UI regression test
+Integration Test
+Code analysis
+
+
+Web Frontend testing:
+jasmine
+selenium
+Lambda test
+Needle
+Page speed
